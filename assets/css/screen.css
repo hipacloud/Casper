@@ -272,7 +272,23 @@ production stylesheet in assets/built/screen.css
 }
 
 .gh-social a {
-    opacity: 0.8
+    opacity: 0.8;
+    padding: 8px 0;
+    min-width: 120px;
+    text-align: center;
+    font-size: 100%;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.gh-social a.btn-outlined {
+    background-color: transparent;
+    border: 1px solid #EEE;
+}
+
+.gh-social a.btn-solid {
+    background-color: transparent;
+    border: 1px solid #EEE;
 }
 
 .gh-social a + a {
@@ -418,9 +434,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         justify-content: space-between;
         user-select: none;
     }
-    .home-template #gh-head .gh-head-brand {
-        justify-content: flex-end;
-    }
     #gh-head .gh-head-menu {
         align-self: center;
         display: flex;
@@ -446,7 +459,17 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     #gh-head .gh-head-actions {
         padding: 20px 0;
         justify-content: center;
+    }
+    #gh-head .gh-head-actions .gh-social {
+        flex-direction: column;
+        justify-content: center;
         text-align: left;
+        display: flex;
+    }
+    #gh-head .gh-head-actions .gh-social a.btn-outlined,
+    #gh-head .gh-head-actions .gh-social a.btn-solid {
+        background-color: transparent;
+        border: none;
     }
     #gh-head .gh-head-actions a {
         margin: 0 10px;
@@ -485,27 +508,8 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     }
 }
 
-.home-template .gh-head {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 2000;
-}
-
-.home-template .gh-head.has-cover {
-    background: transparent;
-}
-
 .home-template.gh-head-open .gh-head {
     background: var(--ghost-accent-color);
-}
-
-.home-template .gh-head-logo {
-    display: none;
-}
-.home-template .gh-head-menu {
-    margin-left: -2.5vmin;
 }
 
 
