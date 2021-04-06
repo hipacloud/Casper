@@ -45,6 +45,9 @@ into the {body} tag of the default.hbs template --}}
                         <span class="byline-reading-time"><span class="bull">&bull;</span> {{reading_time}}</span>
                     </div>
                 </div>
+                <section>
+                    <div id="wechatShare">分享到微信</div>
+                </section>
             </section>
         </div>
 
@@ -77,20 +80,14 @@ into the {body} tag of the default.hbs template --}}
 
 </article>
 
-{{!-- A signup call to action is displayed here, unless viewed as a logged-in member --}}
-{{#unless @member}}
+{{!-- A signup call to action is displayed here --}}
 <section class="footer-cta">
+    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSIxNDQwIiB2aWV3Qm94PSIwIDAgMTQ0MCAxNDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMjMwLjU1IDc2Mi4zMzFDMTY1LjYyOSA2NjkuODM5IDE4OC4wOTkgNTQyLjQwMiAyODAuNzM5IDQ3Ny42OTJMNjU0LjkwOCAyMTYuMzNDNzIyLjg0NSAxNjguODc1IDgxMi43OSAxNjcuMDIgODgyLjcwNiAyMTEuNjMxTDk3Ni42OTIgMjcxLjZDMTAwMi44OSAyODguMzE0IDEwMjQuOTMgMzEwLjc1NCAxMDQxLjE1IDMzNy4yMjFMMTIwNC44NiA2MDQuMjk1QzEyNjMuMDEgNjk5LjE2MSAxMjM0LjU1IDgyMi45NSAxMTQwLjggODgyLjkzMUw3MzYuNTcgMTE0MS41NUM2NDQuMDkzIDEyMDAuNzIgNTIxLjI0NyAxMTc2LjQ4IDQ1OC4xODEgMTA4Ni42NEwyMzAuNTUgNzYyLjMzMVoiIGZpbGw9IiNGRkVGQ0YiLz4KPC9zdmc+Cg==" alt="" style="width:100vw;height:100vw">
     <div class="inner">
-        {{!-- <h2>订阅我们的邮件列表</h2>
-        <a class="footer-cta-button" href="#/portal">
-            <div>请输入邮件地址</div>
-            <span>订阅</span>
-        </a> --}}
-        {{!-- ^ This looks like a form element, but it's just a link to Portal,
-        making the form validation and submission much simpler. --}}
+        <h2>体验简单高效的工作方式</h2>
+        <a class="footer-cta-button" href="https://hipacloud.com/signup">免费注册</a>
     </div>
 </section>
-{{/unless}}
 
 
 {{!-- Read more links, just above the footer --}}

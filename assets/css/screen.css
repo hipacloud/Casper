@@ -42,6 +42,11 @@ production stylesheet in assets/built/screen.css
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
 
+    /* hipa colors */
+    --hipa-color-blue: #D5ECEA;
+    --hipa-color-main-text: #333333;
+    --hipa-button-color: #0099D3;
+
     /*
     An accent color is also set by Ghost itself in
     Ghost Admin > Settings > Brand
@@ -1343,6 +1348,7 @@ Ghost editor. */
     color: color-mod(var(--color-midgrey));
     font-size: 1.4rem;
     line-height: 1.2em;
+    flex-grow: 1;
 }
 
 .article-byline-meta h4 {
@@ -1354,6 +1360,13 @@ Ghost editor. */
     display: inline-block;
     margin: 0 2px;
     opacity: 0.6;
+}
+
+#wechatShare {
+    color: color-mod(var(--color-midgrey));
+    font-size: 1.4rem;
+    opacity: .6;
+    cursor: pointer;
 }
 
 .author-avatar {
@@ -1393,21 +1406,34 @@ Ghost editor. */
 
 .footer-cta {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     padding: 9vmin 4vmin 10vmin;
-    color: #fff;
+    color: var(--hipa-color-main-text);
     text-align: center;
-    background: var(--color-darkgrey);
+    background: var(--hipa-color-blue);
 }
 
 /* Increases the default h2 size by 15%, for small and large screens */
 .footer-cta h2 {
     margin: 0 0 30px;
-    font-size: 3.2rem;
+    font-size: 3.6rem;
+    position: relative;
+}
+
+.footer-cta img {
+    position: absolute;
 }
 
 @media (max-width: 600px) {
     .footer-cta h2 {
         font-size: 2.65rem;
+    }
+
+    .footer-cta img {
+        display: none;
     }
 }
 
@@ -1415,23 +1441,12 @@ Ghost editor. */
     position: relative;
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 500px;
-    padding: 5px 5px 5px 15px;
-    font-size: 1.8rem;
-    color: var(--color-midgrey);
-    background: #fff;
-    border-radius: 8px;
-}
-
-.footer-cta-button span {
-    display: inline-block;
-    padding: 10px 20px;
+    justify-content: center;
+    width: 160px;
+    height: 44px;
+    font-size: 1.6rem;
     color: #fff;
-    font-weight: 500;
-    background: var(--ghost-accent-color);
-    border-radius: 5px;
+    background: var(--hipa-button-color);
 }
 
 
