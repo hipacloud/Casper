@@ -1390,6 +1390,12 @@ Ghost editor. */
     cursor: pointer;
 }
 
+@media (max-width: 767.98px) {
+    #wechatShare {
+        display: none;
+    }
+}
+
 .author-avatar {
     display: block;
     overflow: hidden;
