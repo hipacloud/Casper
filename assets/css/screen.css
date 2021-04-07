@@ -1474,6 +1474,7 @@ Ghost editor. */
     font-size: 1.6rem;
     color: #fff;
     background: var(--hipa-button-color);
+    border-radius: 2px;
 }
 
 
