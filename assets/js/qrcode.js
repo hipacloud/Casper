@@ -10,4 +10,5 @@ new QRCode(qrElement, {
 })
 tippy('#wechatShare', {
     content: qrElement,
+    theme: 'light-border',
 });
