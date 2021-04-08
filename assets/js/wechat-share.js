@@ -57,6 +57,7 @@
     function setWechatShare(config) {
         if (wx && typeof wx.ready === "function") {
             wx.ready(function() {   //需在用户可能点击分享按钮前就先调用
+                config = config || {};
                 var title = config.title || document.title || "黑帕云";
                 var Metas = Array.from(document.head.querySelectorAll("meta[name='og:description']"));
                 var desc = config.desc || "黑帕云(hipacloud.com)是一款更加简单、高效、安全的数据协作平台。在这里，您可以使用已经熟悉的技能如电子表格、看板、图表等创建符合自己业务的软件，满足各行业多场景业务需求。";
@@ -64,7 +65,7 @@
                     desc = Metas[0].getAttribute("content") || desc;
                 }
                 var link = config.link || window.location.href;
-                var imgUrl = config.imgUrl || location.origin + '/favicons/android-chrome-512x512.png';
+                var imgUrl = config.imgUrl || 'https://hipacloud.com/favicons/android-chrome-512x512.png';
                 wx.updateAppMessageShareData({
                     title: title, // 分享标题
                     desc: desc, // 分享描述
