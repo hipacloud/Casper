@@ -82,7 +82,7 @@
         }
     };
 
-    function handleError(err) {
+    const handleError = (err) => {
         if (err) {
             console.log('wechat load failed', err);
         }
@@ -94,3 +94,18 @@
         .then(setWechatShare)
         .catch(handleError);
 })(window, document);
+
+// init qr tooltip
+var qrElement = document.createElement('div');
+new QRCode(qrElement, {
+    text: window.location.href,
+    width: 128,
+    height: 128,
+    colorDark: '#000000',
+    colorLight: '#ffffff',
+    correctLevel: QRCode.CorrectLevel.H
+})
+tippy('#wechatShare', {
+    content: qrElement,
+    theme: 'light-border',
+});

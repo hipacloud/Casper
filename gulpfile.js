@@ -10,6 +10,7 @@ const postcss = require('gulp-postcss');
 const zip = require('gulp-zip');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 const beeper = require('beeper');
 const fs = require('fs');
 
@@ -65,6 +66,11 @@ function js(done) {
             'assets/js/lib/*.js',
             'assets/js/*.js'
         ], {sourcemaps: true}),
+        babel({
+            presets: [
+                ['@babel/preset-env', {"modules": false}]
+            ]
+        }),
         concat('casper.js'),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
