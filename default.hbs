@@ -8,6 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://hipacloud.com/favicons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" href="https://hipacloud.com/favicons/favicon-32x32.png"/>
+    <link rel="alternate icon" type="image/png" sizes="32x32" href="https://hipacloud.com/favicons/favicon-32x32.png"/>
+    <link rel="alternate icon" type="image/png" sizes="16x16" href="https://hipacloud.com/favicons/favicon-16x16.png"/>
+    <link rel="manifest" href="https://hipacloud.com/favicons/site.webmanifest"/>
+    <link rel="mask-icon" href="https://hipacloud.com/favicons/safari-pinned-tab.svg" color="#252423"/>
+    <meta name="msapplication-TileColor" content="#2d89ef"/>
+    <meta name="theme-color" content="#ffffff"/>
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
@@ -25,7 +33,7 @@
         <nav class="gh-head-inner inner gh-container">
 
             <div class="gh-head-brand">
-                <a class="gh-head-logo" href="{{@site.url}}">
+                <a class="gh-head-logo" href="https://hipacloud.com/">
                     {{#if @site.logo}}
                         <img src="{{@site.logo}}" alt="{{@site.title}}" />
                     {{else}}
@@ -43,19 +51,14 @@
             </div>
             <div class="gh-head-actions">
                 <div class="gh-social">
-                    {{#if @site.facebook}}
-                        <a class="gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                    {{/if}}
-                    {{#if @site.twitter}}
-                        <a class="gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                    {{/if}}
+                    <a class="btn-outlined" href="https://hipacloud.com/login" target="_blank">登录</a>
+                    <a class="btn-solid" href="https://hipacloud.com/signup" target="_blank">免费注册</a>
                 </div>
-
             </div>
         </nav>
     </header>
 
-    <main>
+    <main class="gh-main">
         {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
     </main>
@@ -63,7 +66,7 @@
     {{!-- The global footer at the very bottom of the screen --}}
     <footer class="site-footer outer">
         <div class="inner">
-            <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="copyright"><a href="https://hipacloud.com/">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
             <nav class="site-footer-nav">
                 {{navigation type="secondary"}}
             </nav>
